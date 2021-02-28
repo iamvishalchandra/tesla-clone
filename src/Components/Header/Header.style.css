@@ -1,0 +1,87 @@
+.header {
+  background: url("https://tesla.com/ns_videos/model-3-social.jpg") no-repeat center center fixed;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-width: 100px;
+}
+
+.header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 360px;
+}
+
+.header__infoText {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header__infoText h1 {
+  font-weight: 500;
+  font-size: 38px;
+  color: #393c41;
+}
+
+.header__infoText h4 {
+  color: #5c5e62;
+  padding-top: 15px;
+  padding-bottom: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.header__infoText h4 span {
+  border-bottom: 1px solid black;
+}
+
+.header__infoText h4 span:hover {
+  border-bottom-width: 2px;
+}
+
+.header__actions {
+  margin-top: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.header__actions button {
+  border: none;
+  width: 260px;
+  padding: 12px 0;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  outline: none;
+}
+
+.header__primary {
+  background-color: #393c41;
+  color: white;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.header__secondary {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=Header.style.css.map */

@@ -1,0 +1,58 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 15px 15px 15px;
+}
+
+.nav__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 90px;
+  margin-right: 100px;
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+.nav__login a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.nav__login--hidden {
+  visibility: hidden;
+}
+/*# sourceMappingURL=Nav.css.map */
