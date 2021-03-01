@@ -32,7 +32,7 @@ function Nav() {
           <Link to="/" className={sidePanelOpen && "nav__login--hidden"}>
             Shop
           </Link>
-          <Link to="/" className={sidePanelOpen && "nav__login--hidden"}>
+          <Link to="/login" className={sidePanelOpen && "nav__login--hidden"}>
             Tesla Account
           </Link>
           <div

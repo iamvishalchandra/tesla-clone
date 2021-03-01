@@ -1,0 +1,35 @@
+.loginButtons {
+  &__btn {
+    padding: 12px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__btn--login {
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: #3e6ae1;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #3457b1;
+    }
+  }
+
+  &__btn--signUp {
+    background-color: transparent;
+    border: 3px solid #171a20;
+    color: #171a20;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #171a20;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.loginButtons__btn {
+  padding: 12px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.loginButtons__btn--login {
+  border: none;
+  font-weight: bold;
+  color: white;
+  background-color: #3e6ae1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.loginButtons__btn--login:hover {
+  background-color: #3457b1;
+}
+
+.loginButtons__btn--signUp {
+  background-color: transparent;
+  border: 3px solid #171a20;
+  color: #171a20;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginButtons__btn--signUp:hover {
+  background-color: #171a20;
+  color: white;
+}
+/*# sourceMappingURL=LoginButtons.style.css.map */
