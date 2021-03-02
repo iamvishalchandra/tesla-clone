@@ -1,10 +1,13 @@
-import { LanguageOutlined } from "@material-ui/icons";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import Logo from "../../Photos/Logos/tesla-logo.png";
+import { login } from "../../features/userSlice";
+import { auth } from "../../firebase";
+import LabelInput from "../LabelInput/LabelInput";
 import LoginButtons from "../LoginButtons/LoginButtons";
+import LoginNav from "../LoginNav/LoginNav";
 import "./Signup.style.css";
+
 function Signup() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -13,72 +16,80 @@ function Signup() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const signIn = (e) => {
+  const signUp = (e) => {
     e.preventDefault();
-    // auth
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((userAuth) => {
-    //     dispatch(
-    //       login({
-    //         email: userAuth.user.email,
-    //         uid: userAuth.user.uid,
-    //         displayName: userAuth.user.displayName,
-    //       })
-    //     );
-    //     history.push(`/user`);
-    //   })
-    //   .catch((err) => alert(err.message));
+
+    if (!firstName) return alert("Name cannot be empty..");
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user.updateProfile({
+          displayName: firstName,
+        });
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            // displayName: userAuth.user.displayName,
+            displayName: firstName,
+          })
+        );
+        history.push(`/profile`);
+      })
+      .catch((err) => alert(err.message));
   };
   return (
     <div className="signup">
-      <div className="login__top">
-        <div className="login__logo">
-          <Link to="/">
-            <img src={Logo} alt="" />
-          </Link>
-        </div>
-        <div className="login__lang">
-          <LanguageOutlined />
-          <span>en-US</span>
-        </div>
-      </div>
-      <div className="login__info">
-        <h1>Log In</h1>
-        <form className="login__form">
-          <label htmlFor="fname">First Name</label>
-          <input
-            type="text"
-            id="fname"
+      <div className="signup__info">
+        <h1 className="signup__info__h1">CREATE ACCOUNT</h1>
+        <form className="signup__info__form">
+          <LabelInput
+            name="First Name"
+            htmlFor="firstName"
+            type="firstName"
+            id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-          <label htmlFor="lname">Last Name</label>
-          <input
-            type="text"
-            id="lname"
+          <LabelInput
+            name="Last Name"
+            htmlFor="lastName"
+            type="lastName"
+            id="lastName"
             value={lastName}
-            onChange={(e) => setFirstName(e.target.value)}
+            onChange={(e) => setLastName(e.target.value)}
           />
-          <label htmlFor="email">Email Address</label>
-          <input
+          <LabelInput
+            name="Email Address"
+            htmlFor="email"
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
-          <input
+          <LabelInput
+            name="Password"
+            htmlFor="password"
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <LoginButtons name="SIGN IN" type="submit" onClick={signIn} isLogin />
-          <div className="login__or">
-            <hr /> <span>OR</span> <hr />
+
+          <LoginButtons
+            name="CREATE ACCOUNT"
+            type="submit"
+            onClick={signUp}
+            isTopButton
+          />
+          <div className="signup__info__form__break">
+            <hr className="signup__info__form__break__hr signup__info__form__break__hr--1" />
+            <span className="signup__info__form__break__span">OR</span>
+            <hr className="signup__info__form__break__hr signup__info__form__break__hr--2" />
           </div>
           <Link to="/login">
-            <LoginButtons name="CREATE ACCOUNT" />
+            <LoginButtons name="SIGN IN" />
           </Link>
         </form>
       </div>

@@ -1,0 +1,114 @@
+.profile {
+  min-width: 350px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 15px 20px 7px 20px;
+
+    &__logo {
+      &__img {
+        object-fit: contain;
+        width: 80px;
+        filter: invert(100%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      &__a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+        z-index: 0;
+
+        &--hidden {
+          visibility: hidden;
+        }
+      }
+    }
+
+    &__menu {
+      z-index: 2;
+
+      &__sidePanel {
+        &__icon {
+          cursor: pointer;
+
+          &--close {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 140px 30px 140px;
+
+    &__user {
+      &__h4 {
+        font-weight: 500;
+        font-size: x-large;
+      }
+    }
+
+    &__userSection {
+      display: flex;
+      gap: 20px;
+
+      &__a {
+        text-decoration: none;
+        color: #393c41;
+        font-size: smaller;
+        transition: all 0.3s;
+        text-transform: capitalize;
+
+        &:hover {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__products {
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 950px) {
+  .profile__top__links__a__car {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .profile__info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile__info {
+    padding: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile__top__links__a {
+    display: none;
+  }
+}

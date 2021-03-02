@@ -1,0 +1,45 @@
+.loginNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.loginNav__logo__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 90px;
+}
+
+.loginNav__lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 15px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.loginNav__lang__span {
+  font-weight: 500;
+}
+
+.loginNav__lang:hover {
+  background-color: rgba(0, 0, 128, 0.125);
+}
+/*# sourceMappingURL=LoginNav.style.css.map */

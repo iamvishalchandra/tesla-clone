@@ -1,11 +1,11 @@
-import { LanguageOutlined } from "@material-ui/icons";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { login } from "../../features/userSlice";
 import { auth } from "../../firebase";
-import Logo from "../../Photos/Logos/tesla-logo.png";
+import LabelInput from "../LabelInput/LabelInput";
 import LoginButtons from "../LoginButtons/LoginButtons";
+import LoginNav from "../LoginNav/LoginNav";
 import "./Login.style.css";
 
 function Login() {
@@ -26,44 +26,47 @@ function Login() {
             displayName: userAuth.user.displayName,
           })
         );
-        history.push(`/user`);
+
+        history.push(`/profile`);
       })
       .catch((err) => alert(err.message));
   };
 
   return (
     <div className="login">
-      <div className="login__top">
-        <div className="login__logo">
-          <Link to="/">
-            <img src={Logo} alt="" />
-          </Link>
-        </div>
-        <div className="login__lang">
-          <LanguageOutlined />
-          <span>en-US</span>
-        </div>
-      </div>
+      <LoginNav />
+
       <div className="login__info">
-        <h1>Sign In</h1>
-        <form className="login__form">
-          <label htmlFor="email">Email Address</label>
-          <input
+        <h1 className="login__info__h1">Sign In</h1>
+
+        <form className="login__info__form">
+          <LabelInput
+            name="Email Address"
+            htmlFor="email"
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="password">Password</label>
-          <input
+          <LabelInput
+            name="Password"
+            htmlFor="password"
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <LoginButtons name="SIGN IN" type="submit" onClick={signIn} isLogin />
-          <div className="login__or">
-            <hr /> <span>OR</span> <hr />
+
+          <LoginButtons
+            name="SIGN IN"
+            type="submit"
+            onClick={signIn}
+            isTopButton
+          />
+          <div className="login__info__form__break">
+            <hr className="login__info__form__break__hr login__info__form__break__hr--1" />
+            <span className="login__info__form__break__span">OR</span>
+            <hr className="login__info__form__break__hr login__info__form__break__hr--2" />
           </div>
           <Link to="/signup">
             <LoginButtons name="CREATE ACCOUNT" />

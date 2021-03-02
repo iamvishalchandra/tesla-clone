@@ -1,0 +1,134 @@
+.profile {
+  min-width: 350px;
+}
+
+.profile__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 20px 7px 20px;
+}
+
+.profile__top__logo__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.profile__top__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__top__links__a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  z-index: 0;
+}
+
+.profile__top__links__a--hidden {
+  visibility: hidden;
+}
+
+.profile__top__menu {
+  z-index: 2;
+}
+
+.profile__top__menu__sidePanel__icon {
+  cursor: pointer;
+}
+
+.profile__top__menu__sidePanel__icon--close {
+  color: black;
+}
+
+.profile__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 140px 30px 140px;
+}
+
+.profile__info__user__h4 {
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.profile__info__userSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.profile__info__userSection__a {
+  text-decoration: none;
+  color: #393c41;
+  font-size: smaller;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+
+.profile__info__userSection__a:hover {
+  color: black;
+  font-weight: 500;
+}
+
+.profile__products {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 950px) {
+  .profile__top__links__a__car {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .profile__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile__info {
+    padding: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile__top__links__a {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Profile.style.css.map */

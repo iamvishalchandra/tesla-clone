@@ -1,0 +1,21 @@
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    color: #5c5e62;
+    font-weight: 500;
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  &__input {
+    margin-bottom: 30px;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    outline: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: 393c41;
+    font-weight: 600;
+  }
+}

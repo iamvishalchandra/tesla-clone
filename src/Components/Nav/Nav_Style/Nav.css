@@ -13,7 +13,7 @@
   padding: 16px 15px 15px 15px;
 }
 
-.nav__logo img {
+.nav__logo__img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 90px;
@@ -54,5 +54,20 @@
 
 .nav__login--hidden {
   visibility: hidden;
+}
+
+@media (max-width: 1050px) {
+  .nav__logo__img {
+    margin-right: 0;
+  }
+  .nav__links__a__cars {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav__login a {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Nav.css.map */

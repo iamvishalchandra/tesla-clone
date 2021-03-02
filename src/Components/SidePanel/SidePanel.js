@@ -1,25 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./SidePanel_Style/SidePanel.css";
 
 function SidePanel() {
   return (
     <div className="sidePanel">
-      <Link to="/inentory">
-        <h4>existing inventory</h4>
-      </Link>
-      <h4>used inventory</h4>
-      <h4>trade-in</h4>
-      <h4>cybertruck</h4>
-      <h4>roadster</h4>
-      <h4>semi</h4>
-      <h4>charging</h4>
-      <h4>powerwall</h4>
-      <h4>comericial solar</h4>
-      <h4>test drive</h4>
-      <h4>find us</h4>
-      <h4>support</h4>
-      <h4>your country</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--1">existing inventory</h4>
+
+      <h4 className="sidePanel__h4 sidePanel__h4--2">used inventory</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--3">trade-in</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--4">cybertruck</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--5">roadster</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--6">semi</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--7">charging</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--8">powerwall</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--9">comericial solar</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--10">test drive</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--11">find us</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--12">support</h4>
+      <h4 className="sidePanel__h4 sidePanel__h4--13">your country</h4>
     </div>
   );
 }

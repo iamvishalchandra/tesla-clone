@@ -1,0 +1,47 @@
+@mixin flex($fd) {
+  display: flex;
+  flex-direction: $fd;
+}
+
+.signup {
+  padding: 15px 25px 25px 25px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  //   background-color: black;
+  min-width: 330px;
+
+  &__info {
+    @include flex(column);
+    gap: 20px;
+    min-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__h1 {
+      font-weight: 500;
+      font-size: 40px;
+      margin-left: -60px;
+    }
+    &__form {
+      @include flex(column);
+      &__break {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        align-items: center;
+
+        &__span {
+          font-weight: 500;
+          color: #5c5e62;
+        }
+        &__hr {
+          width: 40%;
+          height: 0;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

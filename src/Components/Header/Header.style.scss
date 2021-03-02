@@ -11,64 +11,74 @@
   right: 0;
   display: grid;
   place-items: center;
-  min-width: 100px;
-}
+  min-width: 300px;
 
-.header__info {
-  display: flex;
-  flex-direction: column;
-  height: 360px;
-}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
 
-.header__infoText {
-  text-align: center;
-  flex: 1;
-  h1 {
-    font-weight: 500;
-    font-size: 38px;
-    color: #393c41;
-  }
-  h4 {
-    color: #5c5e62;
-    padding-top: 15px;
-    padding-bottom: 4px;
-    font-size: 15px;
-    // font-weight: 600;
-    cursor: pointer;
-    span {
-      border-bottom: 1px solid black;
+    &__infoText {
+      text-align: center;
+      flex: 1;
+      &__h1 {
+        font-weight: 500;
+        font-size: 38px;
+        color: #393c41;
+      }
+      &__h4 {
+        color: #5c5e62;
+        padding-top: 15px;
+        padding-bottom: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        &__span {
+          border-bottom: 1px solid black;
+
+          &:hover {
+            border-bottom-width: 2px;
+          }
+        }
+      }
     }
-    span:hover {
-      border-bottom-width: 2px;
+
+    &__actions {
+      margin-top: 330px;
+      display: flex;
+      gap: 20px;
+
+      &__button {
+        border: none;
+        width: 260px;
+        padding: 12px 0;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        outline: none;
+
+        &--primary {
+          background-color: #393c41;
+          color: white;
+          opacity: 0.9;
+          cursor: pointer;
+        }
+
+        &--secondary {
+          cursor: pointer;
+          background-color: white;
+          color: black;
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
 
-.header__actions {
-  margin-top: 330px;
-  display: flex;
-  gap: 20px;
-  button {
-    border: none;
-    width: 260px;
-    padding: 12px 0;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-weight: 600;
-    outline: none;
+@media (max-width: 600px) {
+  .header__info__actions {
+    margin-top: 100px;
+    gap: 10px;
+    flex-direction: column;
   }
-}
-
-.header__primary {
-  background-color: #393c41;
-  color: white;
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-.header__secondary {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  opacity: 0.8;
 }

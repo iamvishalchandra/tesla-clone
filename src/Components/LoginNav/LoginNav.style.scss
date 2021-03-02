@@ -1,0 +1,32 @@
+.loginNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    &__image {
+      object-fit: contain;
+      width: 90px;
+    }
+  }
+  &__lang {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: all 0.2s;
+
+    &__span {
+      font-weight: 500;
+    }
+    &:hover {
+      background-color: rgba(0, 0%, 50.2%, 0.125);
+    }
+  }
+  //   Push Content
+}

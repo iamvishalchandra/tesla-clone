@@ -20,12 +20,13 @@
   -ms-overflow-style: none;
 }
 
-.sidePanel h4 {
+.sidePanel__h4 {
   border-bottom: 1px solid #d0d1d2;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   padding: 10px 0 15px 10px;
+  color: black;
   cursor: pointer;
 }
 

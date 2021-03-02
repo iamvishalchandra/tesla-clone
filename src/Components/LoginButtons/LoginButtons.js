@@ -1,10 +1,10 @@
 import React from "react";
 import "./LoginButtons.style.css";
 
-function LoginButtons({ name, type, onClick, isLogin }) {
+function LoginButtons({ name, type, onClick, isTopButton }) {
   return (
     <div className="loginButtons">
-      {isLogin ? (
+      {isTopButton ? (
         <button
           className="loginButtons__btn loginButtons__btn--login"
           type={type}
@@ -13,10 +13,7 @@ function LoginButtons({ name, type, onClick, isLogin }) {
           {name}
         </button>
       ) : (
-        <button
-          className="loginButtons__btn loginButtons__btn--signUp"
-          type={type}
-        >
+        <button className="loginButtons__btn loginButtons__btn--signUp">
           {name}
         </button>
       )}

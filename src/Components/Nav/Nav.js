@@ -9,48 +9,76 @@ function Nav() {
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
 
   return (
-    <>
-      <div className="nav">
-        <div className="nav__logo">
-          <Link to="/">
-            <img src={Logo} alt="Tesla" />
-          </Link>
-        </div>
-        <div className="nav__links">
-          <Link to="/">Model S</Link>
+    <div className="nav">
+      <div className="nav__logo">
+        <Link to="/">
+          <img className="nav__logo__img" src={Logo} alt="Tesla" />
+        </Link>
+      </div>
+      <div className="nav__links">
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--1"
+          to="/"
+        >
+          Model S
+        </Link>
 
-          <Link to="/">Model 3</Link>
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--2"
+          to="/"
+        >
+          Model 3
+        </Link>
 
-          <Link to="/">Model X</Link>
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--3"
+          to="/"
+        >
+          Model X
+        </Link>
 
-          <Link to="/">Model Y</Link>
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--4"
+          to="/"
+        >
+          Model Y
+        </Link>
 
-          <Link to="/">Cybertruck</Link>
-          <Link to="/">Powerwall</Link>
-        </div>
-        <div className="nav__login">
-          <Link to="/" className={sidePanelOpen && "nav__login--hidden"}>
-            Shop
-          </Link>
-          <Link to="/login" className={sidePanelOpen && "nav__login--hidden"}>
-            Tesla Account
-          </Link>
-          <div
-            className="nav__menu"
-            onClick={() => {
-              setSidePanelOpen(!sidePanelOpen);
-            }}
-          >
-            {sidePanelOpen ? <Close /> : <Menu />}
-            {sidePanelOpen && (
-              <div className="nav__sidePanel">
-                <SidePanel />
-              </div>
-            )}
-          </div>
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--5"
+          to="/"
+        >
+          Cybertruck
+        </Link>
+        <Link
+          className="nav__links__a nav__links__a__cars nav__links__a--6"
+          to="/"
+        >
+          Powerwall
+        </Link>
+      </div>
+      <div className="nav__login">
+        <Link to="/shop" className={sidePanelOpen && "nav__login--hidden"}>
+          Shop
+        </Link>
+        <Link to="/login" className={sidePanelOpen && "nav__login--hidden"}>
+          Tesla Account
+        </Link>
+        <div
+          className="nav__login__menu"
+          onClick={() => {
+            setSidePanelOpen(!sidePanelOpen);
+          }}
+        >
+          {sidePanelOpen ? <Close /> : <Menu />}
+          {sidePanelOpen && (
+            <div className="nav__login__sidePanel">
+              <SidePanel />
+            </div>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
